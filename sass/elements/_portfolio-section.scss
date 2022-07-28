@@ -1,0 +1,286 @@
+/*--------------------------------------------------------------
+8. Portfolio Section
+--------------------------------------------------------------*/
+
+.caster-portfolio-wrap {
+
+    .portfolio-heading {
+        position: relative;
+        top: 46px;
+
+        h2 {
+            color: $dark-primary-color;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 1;          
+        }
+
+    }
+
+    .cbp-l-filters-text {
+        padding: 0;
+    }
+
+    .cbp-l-filters-text .cbp-filter-item {
+        font-size: 14px;
+        color: $dark-primary-color;
+
+        &.cbp-filter-item-active {
+            color: $dark-theme-color;
+        }
+    }
+
+    .cbp-l-subfilters .cbp-filter-item {
+        margin: 0 7px 5px 7px;
+        color: $dark-primary-color;
+        font-size: 14px;
+
+        &:first-of-type {
+            margin-left: 0;
+        }
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+
+    }
+
+    .cbp-l-subfilters .cbp-filter-item:after {
+        display: none;
+    }
+
+    .cbp-l-subfilters {
+        margin-top: -25px;
+        margin-bottom: 25px;
+    }
+
+    .cbp-l-filters-text.text-left {
+
+        &, & + .cbp-l-subfilters {
+            text-align: left !important;
+        }
+    }
+
+    .cbp-l-filters-text.text-right {
+
+        &, & + .cbp-l-subfilters {
+            text-align: right !important;
+        }
+    }
+
+    .cbp-l-filters-text.custom-filter {
+
+        display: inline-block;
+        background: #fff;
+        padding: 0;
+        border-radius: 50px;
+        overflow: hidden;      
+        margin-bottom: 40px !important; 
+
+        .cbp-filter-item:first-of-type {
+            margin: 0;
+            line-height: 40px;
+            padding: 0 0 0 30px !important;
+            background: #0a0a0a;
+            color: #fff !important;
+        }
+
+        .cbp-filter-item:last-of-type {
+            margin: 0;
+            line-height: 40px;
+            padding: 0 30px 0 20px !important;
+            color: #0a0a0a !important;
+        }
+
+    }
+}
+
+@media( min-width: 767px ) {
+
+    .caster-portfolio-wrap {
+
+        .cbp-l-filters-text .cbp-filter-item {            
+            padding:0;
+
+            &:after {
+                content: '/';
+                display: inline-block;
+                color: $dark-primary-color;
+                margin: 0 9px 0 11px;
+            }
+
+            &:last-of-type {
+
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media( max-width: 767px ) {
+
+    .caster-portfolio-wrap {
+
+        .cbp-l-filters-text .cbp-filter-item {
+
+            &:first-of-type {
+                padding-left: 0;
+            }
+
+            &:last-of-type {
+                padding-right: 0;
+            }
+        }
+    }
+}
+
+// Portfolio Section
+.caster-portfolio-wrap {
+
+    .cbp {
+
+        .cbp-l-caption-title {            
+            line-height: 1.9;
+        }
+
+        &[ data-loadmoreaction="auto" ] {
+
+            & + #more-projects.load-more {
+                opacity: 0;
+                visibility: hidden;
+                height: 0;
+                margin-top:0;
+            }
+        }
+    }
+
+    .cbp-l-grid-agency-title {
+        color: $dark-primary-color;
+        font-size: 15px;
+        line-height: 1.4;
+        font-weight: 500;
+        text-align: left;
+        padding:0;
+        margin-top:28px;
+    }
+
+    .cbp-item:hover .cbp-l-grid-agency-title {
+        color: $dark-primary-color;
+    }
+
+    .cbp-l-grid-agency-desc {
+        color: $dark-secondry-color;
+        font-size: 13px;
+        line-height: 1.4;
+        font-weight: 500;
+        text-align: left;
+        margin-top: 3px;
+    }
+
+    .cbp-l-grid-agency-title,
+    .cbp-l-grid-agency-desc {
+
+        &.alignCenter {
+            text-align: center;
+
+            & + .viewproject {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+
+    .cbp.cbp-caption-custom-effect .view-project {
+        color: $dark-secondry-color;
+        font-size: 13px;
+        line-height: 1;
+        font-weight: 500;
+        position: relative;
+        display: inline-block;
+
+        &:after {
+            content:'';
+            display: inline-block;
+            position: absolute;
+            width: 12px;
+            height: 1px;
+            top: 7px;
+            right: -17px;
+            background-color: $dark-theme-color;
+        }
+    }
+
+    .cbp-caption-minimal .cbp-caption-activeWrap {
+        background-color: $dark-theme-color;
+        transition: all cubic-bezier(0.4, 0, 0.2, 1) 0.4s;
+    }
+
+    .cbp-caption-minimal .cbp-l-caption-title, 
+    .cbp-caption-minimal .cbp-l-caption-desc {
+        transition: all cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+    }
+
+    .cbp-caption-minimal .cbp-l-caption-title {
+        color: #ffffff;
+        font-size: 17px;
+        font-weight: 500;
+    }
+
+    .cbp-caption-minimal .cbp-l-caption-desc {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 14px;
+    }
+
+    #more-projects.load-more {
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .cbp.cbp-caption-custom-effect {
+
+        .cbp-item {
+
+            .cbp-caption {
+
+                .cbp-l-grid-agency-desc {                    
+                    transform: translateY(0);
+                    transition: transform cubic-bezier(.4,0,.2,1) .3s, opacity cubic-bezier(.4,0,.2,1) .3s;
+                    opacity: 1;
+                }
+
+                .view-project {
+                    -webkit-transform: translateY(0);
+                    -ms-transform: translateY(0);
+                    transform: translateY(0);
+                    opacity: 0;
+                    transition:transform cubic-bezier(.4,0,.2,1) .3s, opacity cubic-bezier(.4,0,.2,1) .3s;
+                }
+
+                .cbp-caption-defaultWrap {
+                    transition:transform cubic-bezier(.4,0,.2,1) .3s, opacity cubic-bezier(.4,0,.2,1) .3s;
+                    opacity: 1;
+                }
+
+                &:hover {
+
+                    .cbp-l-grid-agency-desc {
+                        transform: translateY(-25px);
+                        opacity: 0;   
+                    }
+
+                    .view-project {
+                        opacity: 1;
+                        transform: translateY(-22px);
+                    }
+
+                    .cbp-caption-defaultWrap {
+                        transform: scale(0.98);
+                        opacity:.75;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,141 @@
+/*--------------------------------------------------------------
+16. Contact Form
+--------------------------------------------------------------*/
+
+div.caster-cf .ajax-loader.is-active {
+    visibility: hidden;
+}
+
+.caster-cf-form {
+
+    div.caster-cf-mail-sent-ok,
+    div.caster-cf-response-output {        
+        border: 0;
+        display: none;       
+        text-align: center;
+    }
+
+    div.caster-cf-mail-sent-ok.validated,
+    div.caster-cf-validation-errors.validation-error {       
+        display: block;        
+    }
+
+    div.caster-cf-response-output {
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    input:not(.caster-cf-submit), textarea {
+        background-color: transparent;
+        border: 0;
+        border-bottom: 1px solid #343434;
+        font-size: 14px;
+        padding: 0 0 2px;
+        position: relative;
+    }
+
+    & > p {
+        clear: both;
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+
+    .caster-cf-form-control-wrap:not(.message) {
+        display: inline-block;
+        width: 33.33333333333333%;
+        float: left;
+        padding: 0 20px;        
+    }
+
+    .caster-cf-form-control-wrap {
+        display: block;
+        width: 100%;
+
+        &.message {
+            clear: both;
+            padding: 37px 20px 0;
+        }
+    }
+
+    input[ type="submit" ] {
+        margin-top: 50px;
+        margin-left: 20px;
+    }   
+
+    span.caster-cf-not-valid-tip {
+        display: none;
+        color: #e8252e;
+        margin-top: 10px;
+    }
+
+    span.caster-cf-not-valid-tip.validation-error {
+        display: block;
+    }    
+
+    div.caster-cf-validation-errors, 
+    div.caster-cf-acceptance-missing {
+        border: none;
+        color: #e8252e;
+        margin: 0;
+        padding: 0;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    textarea {
+        height: 23px;
+        overflow: hidden;
+        padding: 0;
+    }
+
+    .caster-cf-submit {
+        background-color: transparent;
+        color: $dark-primary-color;
+
+        &:hover {
+            opacity: .9;
+        }
+    }
+}
+
+div.caster-cf .ajax-loader {
+    position: absolute;
+    bottom: -13px;
+}
+
+@media ( max-width: 767px ) {
+
+    .left-block, .right-block {
+        padding: 0 !important;
+    }
+}
+
+::placeholder {
+    color: $dark-secondry-color;
+}
+
+:-ms-input-placeholder {
+    color: $dark-secondry-color;
+}
+
+::-ms-input-placeholder {
+    color: $dark-secondry-color;
+}
+
+@media ( max-width: 767px ) {
+
+    .caster-cf-form .caster-cf-form-control-wrap:not(.message) {
+        float: none;
+        width: 100%;
+        display: block;
+        margin-top: 30px;
+
+        &:first-of-type {
+            margin-top: 0;
+        }
+    }
+
+    .caster-cf-form .caster-cf-form-control-wrap.message {
+        padding-top: 32px;
+    }
+}

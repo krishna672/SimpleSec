@@ -1,0 +1,111 @@
+/*--------------------------------------------------------------
+14. Testimonials
+--------------------------------------------------------------*/
+
+.testimonials-slider-wrap {
+    padding-left: 205px;
+    position: relative;
+
+    &:before {
+        content:'';
+        background-image: url( assets/images/svg/quote.svg );
+        background-repeat: no-repeat;
+        background-size: 36px;
+        width: 36px;
+        height: 36px;
+        top: 20px;
+        left: 85px;
+        display: inline-block;
+        position: absolute;
+    }
+
+    .testimonials {
+
+        .tml-content {
+
+            p {
+                font-size: 20px;
+                line-height: 36px;
+                font-style: italic;
+            }
+        }
+
+        .tml-footer {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            margin-top: 10px;
+
+            .tml-avator {
+                width: 80px;
+                height: 80px;
+
+                img {
+                    border-radius: 50%;
+                }
+            }
+
+            .tml-author {
+                margin-left: 25px;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+
+                h4 {
+                    font-size: 15px;
+                    font-weight: 400;
+                    line-height: 1;
+                    margin-bottom: 5px;
+                }
+
+                span {
+                    font-size: 13px;
+                    line-height: normal;
+                }    
+            }
+        }
+    }
+
+    .swiper-container-horizontal > .swiper-pagination-bullets,
+    .swiper-pagination-custom, .swiper-pagination-fraction {
+        bottom: 0;
+        text-align: right;
+    }
+
+    .swiper-pagination-custom, .swiper-pagination-fraction {
+        color: $dark-secondry-color;
+        font-size: 13px;
+    }
+
+    .swiper-pagination-bullet {
+        background: rgba( 154, 154, 154, .8 );
+        opacity: 1;
+
+        &.swiper-pagination-bullet-active {
+            opacity: .6;
+        }
+    }
+
+    .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+        margin: 0 5px;
+    }
+}
+
+@media ( max-width: 767px ) {
+
+    .testimonials-slider-wrap {
+        padding-left: 0;
+        padding-top: 90px;
+
+        &:before {
+            left: 0;
+        }
+    }
+}

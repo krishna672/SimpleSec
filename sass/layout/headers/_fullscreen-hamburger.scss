@@ -1,0 +1,228 @@
+/*--------------------------------------------------------------
+Fullscreen Hamburger Menu
+--------------------------------------------------------------*/
+
+#masthead.site-header {
+
+    &.fullscreen-hamburger-menu {
+
+        #ham-trigger-wrap {
+            position: relative;
+            z-index: 11;
+
+            .ham-trigger {
+                
+                span {
+                        background-color: transparent;
+
+                        &:before {
+                            top: -5px;
+                        }
+
+                        &:after {
+                            top: 5px;
+                        }
+
+                        &:before, &:after, & {
+                            width: 20px;
+                        }
+                    }
+            }
+
+            &.open {
+
+                .ham-trigger { 
+
+                    span {
+
+                        &:before {
+                            -webkit-transform: translateY(7px) rotateZ(-45deg);
+                            -ms-transform: translateY(7px) rotateZ(-45deg);
+                            transform: translateY(7px) rotateZ(-45deg);
+                        }
+
+                        &:after {
+                            -webkit-transform: translateY(-3px) rotateZ(46deg);
+                            -ms-transform: translateY(-3px) rotateZ(46deg);
+                            transform: translateY(-3px) rotateZ(46deg);    
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+body.fullscreen-hamburger-menu-acive {
+    overflow: hidden;
+
+    .swiper-container.fullscreen-projects .swiper-pagination, 
+    .caster-swiper-container.fullscreen-projects .swiper-pagination,
+    .swiper-container.fullscreen-projects .swiper-button-prev, 
+    .caster-swiper-container.fullscreen-projects .swiper-button-prev,
+    .swiper-container.fullscreen-projects .swiper-button-next, 
+    .caster-swiper-container.fullscreen-projects .swiper-button-next,
+    #multiscroll-nav {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@media ( min-width: 992px ) {
+
+    #masthead.site-header {
+
+        &.fullscreen-hamburger-menu {
+
+            #site-branding {
+                position: relative;
+                z-index: 11;
+
+                a {
+                    padding: 40px 0 40px;
+                }
+            }
+
+            .main-navigation-wrap {
+                position: fixed;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                background: $dark-bg-color;
+                z-index: 10;
+                opacity: 0;
+                visibility: hidden;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            #site-navigation {
+
+                .menu {
+                    text-align: center;
+                    width: calc(100vw + 30px);
+                    margin-top: 75px;
+
+                    & > li {
+                        padding: 7px 0;
+                        opacity: 0;
+
+                        &.current-menu-item,
+                        &.current-menu-parent {                        
+
+                            & > a {
+                                color: $dark-theme-color;
+                            }
+                        }
+
+                        & > a {
+                            font-size: 28px;
+                            font-weight: 600;
+
+                            &:hover {
+                                color: $dark-theme-color;
+                            }
+                        }
+
+                        ul {
+                            display: none;
+                            margin: 15px 0;
+
+                            li {
+
+                                a {
+                                    font-size: 20px;
+
+                                    &:hover {
+                                       color: $dark-theme-color;
+                                    }
+                                }      
+                            }
+
+                            ul { 
+
+                                li {
+
+                                    a {
+                                        font-size: 15px;
+
+                                        &:hover {
+                                          color: $dark-theme-color;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }    
+
+            .contact-info-wrap {
+                display: flex;
+                justify-content: space-between;
+                padding-left: 80px;
+                padding-right: 80px;
+                padding-bottom: 30px;
+
+                .contact-info {
+                    color:#fff;
+                    font-size: 13px;
+                }
+
+                .social-links-menu {
+                    margin: 0;
+
+                    li {
+                        display: inline-block;
+                        margin-left: 12px;
+
+                        a {
+
+                            i {                                
+                                font-size: 12px;
+                            }
+
+                            &:hover {
+                               color: $dark-theme-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media  (max-width: 991px ) {
+
+    #masthead.site-header {
+
+        &.fullscreen-hamburger-menu {
+
+            .contact-info-wrap {
+                display: none;
+            }
+
+            .main-navigation-wrap {
+                width: 100%;
+                position: absolute;
+                top: 100%;
+            }
+
+            #site-navigation {
+
+                .menu {
+
+                    & > li {
+                        
+                        & > a {
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }    
+}

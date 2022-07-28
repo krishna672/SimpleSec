@@ -1,0 +1,36 @@
+/*--------------------------------------------------------------
+Blog Banner
+--------------------------------------------------------------*/
+
+.blog-banner {
+    padding-bottom: 77px;
+
+    .blog-banner-content-wrap {
+        position: relative; 
+
+        .blog-banner-content {
+
+            .banner-title {
+                font-size: 44px;
+                line-height: 1.2;
+                font-weight: 600;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+@media ( max-width: 767px ) {
+
+    .blog-banner .blog-banner-content-wrap .blog-banner-content .banner-title {
+        font-size: 40px;
+        line-height: 50px;
+    }
+
+    .post .entry-header .entry-title, 
+    .post .entry-header .entry-title a {
+        font-size: 28px;
+        line-height: 34px ;
+    }
+}
+

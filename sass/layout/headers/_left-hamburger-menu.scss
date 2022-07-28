@@ -1,0 +1,179 @@
+/*--------------------------------------------------------------
+Left Hamburger Menu
+--------------------------------------------------------------*/
+@media ( min-width: 992px ) {
+
+    #masthead.site-header {
+
+        &.left-hamburger-menu {
+            position: fixed;
+            width: 115px;
+            height: 100vh;
+            left: 0;
+            top: 0;
+
+            .wrap {
+                flex-direction: column;
+                padding-left: 40px !important;
+                padding-right: 20px !important;
+                height: 100%;
+                align-items: flex-start;
+            }
+
+            #ham-trigger-wrap {
+                position: relative;
+                z-index: 10;
+            }
+
+            #site-navigation {
+                position: absolute;
+                width: 350px;
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                background-color: #111414;
+                padding-left: 120px;
+                left: -350px;
+                opacity: 0;
+
+                &.display-menu {
+                    z-index: 1;
+                }
+
+                .menu {
+                    width: calc(100% + 20px);
+
+                    a {
+                        color:#fff;
+                        font-size: 15px;
+                        font-weight: 500;
+                        text-transform: none;
+
+                        &:hover {
+                            color: $dark-theme-color;
+                        }
+                    }
+
+                    & > li {
+                        margin-bottom: 10px;
+                        padding-bottom: 11px;
+                        opacity: 0;
+
+                        &.current-menu-item,
+                        &.current-menu-parent {                        
+
+                            & > a {
+                                color: $dark-theme-color;
+                            }
+                        }
+
+                        &:last-of-type {
+                            margin-bottom: 0;
+                        }
+
+                        & > a { 
+                            display: block;
+                        }
+
+                        ul {
+                            padding: 10px 12px 4px;
+                            display: none;
+
+                            & > li {
+                                margin-bottom: 8px;
+
+                                &:last-of-type {
+                                    margin-bottom: 0;
+                                }
+
+                                & > a {
+                                    font-size: 13px;
+                                    font-weight: 500;
+                                }
+                            }
+                            ul{
+                                & > li {
+                                    & > a {
+                                        font-size: 13px;
+                                        font-weight: 500;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                #hamburger-menu-close-trigger {
+                    cursor:pointer;
+                    position:absolute;
+                    top: 19px;
+                    right: 23px;
+
+                    .hamburger-menu-close {
+                        display: inline-block;
+                        transform: translateY(-5px);
+
+                        span {
+                            display: inline-block;
+                            position: relative;
+                            background-color: transparent !important;
+
+                            &:before, &:after {
+                                content: '';
+                                position: absolute;
+                            }
+
+                            &:before {
+                                top: -8px;
+                                -webkit-transform: translateY(8px) rotateZ(-45deg);
+                                -ms-transform: translateY(8px) rotateZ(-45deg);
+                                transform: translateY(8px) rotateZ(-45deg);
+                            }
+
+                            &:after {
+                                top: 8px;
+                                -webkit-transform: translateY(-8px) rotateZ(45deg);
+                                -ms-transform: translateY(-8px) rotateZ(45deg);
+                                transform: translateY(-8px) rotateZ(45deg);    
+                            }
+
+                            &:before, &:after, & {
+                                width: 21px;
+                                height: 2px;
+                                -webkit-transition: all .3s ;
+                                -o-transition: all .3s ;
+                                transition: all .3s ;
+                                background-color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+            .contact-info {
+                -webkit-writing-mode: vertical-rl;
+                -ms-writing-mode: rl-tb;
+                writing-mode: vertical-rl;
+                -webkit-transform: rotate(180deg);
+                transform: rotate(180deg);
+                text-orientation: mixed;
+                line-height: 1;
+                padding-top: 40px;
+
+                &, a {
+                    color: #fff;
+                }               
+
+            }
+            & + .site-content-contain {
+                margin-left: 115px;
+            }
+        }
+    }
+}
+
+@media ( max-width: 991px ) {
+
+    #masthead.site-header.left-hamburger-menu .contact-info {
+        display: none;                         
+    }
+}

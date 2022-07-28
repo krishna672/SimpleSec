@@ -1,0 +1,684 @@
+/*--------------------------------------------------------------
+27. Light Skin
+--------------------------------------------------------------*/
+
+body.light {
+
+    //Base
+    background-color: $light-bg-color;
+    color: $light-secondry-color;
+
+    .accent-color {
+        color: $light-theme-color;
+    }
+    
+
+    .btn-container a {
+        font-size: 15px;
+        font-weight: 500;      
+    } 
+     
+    .btn-container.btn-link a {
+        background-color: $light-theme-color; 
+        color: $light-bg-color;
+        font-size: 15px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        padding: 13px 27px 13px 27px;
+    
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    .btn-container.btn-link.btn-big a {
+        font-size: 20px;
+        padding: 25px 50px;
+    }
+
+     //Forms
+     input {
+
+        &[type="text"], &[type="email"], &[type="url"], &[type="password"], &[type="search"], &[type="number"], &[type="tel"], 
+        &[type="range"], &[type="date"], &[type="month"], &[type="week"], &[type="time"], &[type="datetime"], &[type="datetime-local"], 
+        &[type="color"] {            
+            background-color: #eee;
+            color: $light-secondry-color;
+        }
+    }
+
+    textarea {
+        background-color: #eee;
+        color: $light-secondry-color;
+    }   
+    
+    input[type="button"], input[type="submit"] {
+        background-color: $light-theme-color;       
+        color: #fff;        
+    
+        &:hover {
+            color: #fff;
+            opacity: 0.8;
+        }
+    }
+
+    //Typography
+    h1, h2, h3, h4, h5, h6 {
+        color: $light-primary-color;  
+    }
+
+    p {
+        color: $light-secondry-color;
+    }
+
+    //Animation
+    .portfolio-listing-wrap.listing-zigzag,
+    .portfolio-listing-wrap.listing-vertical-alt,
+    .portfolio-listing-wrap.listing-vertical,
+    .portfolio-listing-wide {
+
+        .pl-media, .cbp-caption-defaultWrap {    
+        
+            &:after {
+                border: solid 30px $light-bg-color;
+            }
+
+        }
+
+    }
+
+    //Utilities
+    blockquote {
+        background-color: #f5f5f5;
+        color: $light-primary-color;
+
+        p {
+          color: $light-primary-color;
+        }
+
+        &:before {
+          opacity: 0.3;
+        }
+    }
+
+    // Lazy Load
+    .caster-swiper-preloader,
+    .caster-swiper-slider-wrap .caster-swiper-preloader,
+    .caster-swiper-slider-wrap .swiper-lazy-preloader,
+    .caster-swiper-container .swiper-lazy-preloader {
+        background-color: #f7f7f7;
+    }
+
+    .caster-portfolio-wrap .cbp-lazyload {
+        background-color: #f7f7f7 !important;
+    }
+    
+    .portfolio-listing-wrap .portfolio-thumbnail:before {
+        background-color: #f7f7f7;
+        border-color: #f7f7f7;
+    }
+   
+    .background-circle div {
+        border: 50px solid rgba(238, 238, 238, 0.5);        
+    }
+
+    .vertical-text p {
+        color: $light-primary-color;        
+    }
+
+    //Elements
+
+    //Conact form
+    .caster-cf-form {
+
+        input[type="text"], input[type="email"], textarea {  
+            color: $light-secondry-color;   
+            border-bottom-color: #b9b9b9;  
+            background-color: transparent; 
+        }
+
+        input[ type="submit" ] {
+            background-color: $light-theme-color;        
+
+            &:hover {
+                color: #fff;
+                opacity: 0.8;
+            }
+        }
+
+    }
+
+    //Contact Info
+    .contact-info div h3 {
+        color: $light-primary-color;
+    }
+
+    .contact-info div span,
+    .contact-info div span a,
+    .contact-info div address {
+        color: $light-secondry-color;
+    }
+
+    //CTA
+    .cta {
+
+        .cta-background-text {        
+            color: rgba(245, 245, 245, 0.7);
+        }
+
+        a {
+            font-size: 46px;
+            color: $light-theme-color;
+
+            @media ( max-width: 1025px ) {
+                font-size: 40px;
+            }
+    
+            @media ( max-width: 767px ) {   
+                font-size: 25px;    
+            }
+        }
+    }
+
+    //Heading Block
+    .heading-block h1 {
+        color: $light-primary-color;        
+    }
+
+    .heading-block h2 {
+        font-weight: 600;
+    }
+
+    //Portfolio Carousel
+    #tooltip {
+        background-color: $light-bg-color;
+    }
+
+    //Portfolio Listing
+    .portfolio-listing-wrap.listing-vertical-alt .portfolio-list .pl-content-wrap .pl-content p,
+    .portfolio-listing-wrap.listing-vertical .portfolio-list .pl-content-wrap .pl-content p,
+    .caster-portfolio-wrap .portfolio-listing-wide .cbp-item .desc-wrap-container .cbp-l-grid-agency-desc,
+    .portfolio-listing-wrap.listing-zigzag .portfolio-list .pl-content-wrap .pl-content p {       
+        color: $light-secondry-color;
+    }
+
+    .portfolio-listing-wrap.listing-fullwidth-parallax .pl-content-wrap .pl-content p {   
+        color: $light-secondry-color;
+        font-weight: 400;
+    }
+
+    .portfolio-listing-wrap.listing-fullwidth-parallax .pl-content-wrap .pl-content h1 {
+        color: $light-primary-color;
+    }   
+
+    .caster-portfolio-wrap .portfolio-listing-wide .btn-container a {
+        color: $light-primary-color;
+        font-weight: 400;
+    }
+
+    .portfolio-listing-wrap .btn-container a {
+        color: $light-primary-color;
+    }
+
+    //Portfolio Section
+    .caster-portfolio-wrap {
+
+        .portfolio-heading {
+
+            h2 {
+                color: $light-primary-color;
+                font-weight: 600;
+            }
+
+        }
+
+        .cbp-l-filters-text {
+            margin-bottom: 20px;
+        }
+
+        .cbp-l-filters-text .cbp-filter-item {
+            color: $light-primary-color;
+
+            &.cbp-filter-item-active {
+                color: $light-theme-color;
+            }
+
+            &:after {             
+                color: $light-primary-color;
+            }
+        }
+
+        .cbp-l-grid-agency-title {
+            color: $light-primary-color;
+            font-size: 16px;
+        }
+
+        .cbp-l-grid-agency-desc {            
+            color: $light-secondry-color;
+            font-weight: 400;
+        }
+
+        .cbp-item:hover .cbp-l-grid-agency-title {
+            color: $light-primary-color;
+        }
+
+        .cbp.cbp-caption-custom-effect .view-project {
+            color: $light-secondry-color;
+            font-weight: 400;
+        }
+
+        .load-more a {
+            border-color: #000000;
+            color: $light-primary-color;
+
+            &:hover {
+                background-color: $light-primary-color;
+                color: #fff;
+            }
+        }
+
+    }
+
+    //Portfolio Slider
+    .caster-swiper-container.single-project:before {
+        background-color: $light-bg-color;
+    }
+
+    .caster-swiper-container.multiple-projects.content-under-image {
+
+        .swiper-title {  
+            font-size: 16px;
+            color: $light-primary-color;
+        }
+
+        .swiper-subtitle {        
+            color: $light-secondry-color;
+        }
+
+    }
+
+    .caster-swiper-container.fullscreen-projects .swiper-slide .swiper-slide-item .swiper-title-wrap h1 {
+        color: $light-primary-color;
+        font-size: 42px;
+        font-weight: 600;
+    }
+
+    .caster-swiper-container.fullscreen-projects .swiper-slide .swiper-slide-item .swiper-title-wrap p {
+        color: $light-secondry-color;
+    }
+
+
+    //Portfolio Split Slider
+
+    #multiscroll-nav span {
+        border: 1px solid $light-primary-color !important;
+    }
+    
+    #multiscroll-nav li .active span {
+        background: $light-primary-color !important;
+    }
+
+    .portfolio-split-slider .caster-ms-section .title-wrap .btn-container a {
+        background-color: $light-theme-color;
+        color: $light-bg-color;
+    }
+
+    .portfolio-split-slider .caster-ms-section .title-wrap .btn-container a:hover {      
+        opacity: 0.8; 
+    } 
+
+    .portfolio-split-slider .caster-ms-section .title-wrap p {
+        font-size: 15px;
+        font-weight: 400;
+    }
+
+
+    //Testimonials
+    .testimonials-slider-wrap:before {
+        opacity: 0.15;
+    }
+
+    .testimonials-slider-wrap .swiper-pagination-custom,
+    .testimonials-slider-wrap .swiper-pagination-fraction {
+        color: $light-secondry-color;
+    }
+
+    //Text Block
+    .text-block p {
+        color: $light-secondry-color;        
+    }
+
+    //Progress bar
+    .progress-bar-wrapper .progress-bar-wrap .progress-bar-title {
+        color: $light-primary-color;
+    } 
+
+    .progress-bar-wrapper .progress-bar-wrap .progress {
+        background-color: #D3D3D3;
+    }
+
+    .progress-bar-wrapper .progress-bar-wrap .progress .progress-bar {
+        color: $light-primary-color;
+        background-color: $light-primary-color;
+    }
+
+    
+
+    //Header
+
+    //Standard Menu
+    #masthead.site-header.standard {
+
+       #site-navigation .menu > li > a {          
+            font-weight: 500;
+            color: $light-primary-color;        
+       }
+
+    }
+
+    //Sidebar Menu
+    #masthead.site-header.left-sidebar-menu #site-navigation .menu li a {
+        color: $light-primary-color;
+    }
+
+    #masthead.site-header.left-sidebar-menu #site-navigation .menu li a:hover {     
+        color: $light-theme-color;
+    }
+
+    #masthead.site-header.left-sidebar-menu .contact-info {
+        color: $light-primary-color;
+    }
+
+    #masthead.site-header.left-sidebar-menu #site-navigation .menu > li.current-menu-item > a,
+    #masthead.site-header.left-sidebar-menu #site-navigation .menu > li.current-menu-parent > a {
+        color: $light-theme-color;
+    }
+
+
+    //Fullscreen Hamburger Menu
+    #masthead.site-header.fullscreen-hamburger-menu.solid, 
+    #masthead.site-header.fullscreen-hamburger-menu .main-navigation-wrap {
+        background-color: rgba( 255, 255, 255, 1 );
+    }
+
+    #masthead.site-header.fullscreen-hamburger-menu #site-navigation .menu li a,
+    #masthead.site-header.fullscreen-hamburger-menu .contact-info-wrap .social-links-menu li a,
+    #masthead.site-header.fullscreen-hamburger-menu .contact-info-wrap .contact-info {
+        color: $light-primary-color;
+    }
+
+    #masthead.site-header.fullscreen-hamburger-menu #site-navigation .menu li a:hover,
+    #masthead.site-header.fullscreen-hamburger-menu .contact-info-wrap .social-links-menu li a:hover {    
+        color: $light-theme-color;
+    }
+
+    #masthead.site-header.fullscreen-hamburger-menu #ham-trigger-wrap .ham-trigger span {
+        background-color: transparent;
+    }
+
+    #masthead.site-header.fullscreen-hamburger-menu #site-navigation .menu > li.current-menu-item > a,
+    #masthead.site-header.fullscreen-hamburger-menu #site-navigation .menu > li.current-menu-parent > a {
+        color: $light-theme-color;
+    }
+
+
+    //Left Hamburger Menu
+    #masthead.site-header.left-hamburger-menu, 
+    #masthead.site-header.left-hamburger-menu #site-navigation {
+        background-color: rgba( 255, 255, 255, 1 );
+    }
+    
+    #masthead.site-header.left-hamburger-menu .contact-info,
+    #masthead.site-header.left-hamburger-menu #site-navigation .menu li a {     
+        color: $light-primary-color;
+    }
+
+    #masthead.site-header.left-hamburger-menu #site-navigation .menu > li > a {     
+        color: $light-primary-color;
+        font-weight: 600;
+    }    
+
+    #masthead.site-header.left-hamburger-menu #site-navigation .menu li a:hover {     
+        color: $light-theme-color;
+    }
+
+    #masthead.site-header.left-hamburger-menu #ham-trigger-wrap.open .ham-trigger span {
+        background-color: transparent;
+    }
+
+    #masthead.site-header.left-hamburger-menu #site-navigation .menu > li.current-menu-item > a,
+    #masthead.site-header.left-hamburger-menu #site-navigation .menu > li.current-menu-parent > a {
+        color: $light-theme-color;
+    }
+
+    //General
+    #masthead.site-header {        
+        background-color: $light-bg-color;
+
+        &.standard.is-stuck {
+            background-color: $light-bg-color;
+        }
+        
+        #ham-trigger-wrap .ham-trigger span:before,
+        #ham-trigger-wrap .ham-trigger span:after,
+        #ham-trigger-wrap .ham-trigger span {
+            background-color: $light-primary-color;
+        }       
+    }     
+
+    @media  ( max-width: 991px ) {
+
+        #masthead.site-header.standard #site-navigation .menu li a,
+        #masthead.site-header.left-sidebar-menu #site-navigation .menu li a,
+        #masthead.site-header.fullscreen-hamburger-menu #site-navigation .menu  li a,
+        #masthead.site-header.left-hamburger-menu #site-navigation .menu li a {
+            color: $light-bg-color;
+
+            &:hover {
+                color: $light-theme-color;
+            }
+        }
+
+        #masthead.site-header #ham-trigger-wrap.open .ham-trigger span {
+            background-color: transparent;
+        }
+
+        #masthead.site-header.standard #site-navigation .menu > li.current-menu-item > a,
+        #masthead.site-header.standard #site-navigation .menu > li.current-menu-parent > a {
+            color: $light-theme-color;
+        }
+    
+    }
+    
+   
+
+    //Portfolio
+
+    .portfolio-navigation-wrap .portfolio-navigation span {
+        font-weight: 500;
+        color: rgba( 10, 10, 10, 0.5 );
+    }
+
+    .portfolio-navigation-wrap .portfolio-navigation .portfolio-navigation-title a h3 {
+        font-weight: 600;
+        color: $light-primary-color;
+
+        &:hover {
+            color: $light-theme-color;
+        }
+    }
+
+    &.single-portfolio .portfolio .entry-meta-title h4 {
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    &.single-portfolio .portfolio .entry-meta .meta-entries ul li span:not( .portfolio-categories ):not( .portfolio-tags ) {
+        font-weight: 500;
+        color: $light-primary-color;
+    }
+
+    &.single-portfolio .portfolio .entry-meta .meta-entries ul li a {
+        color: $light-secondry-color;
+    }
+
+    //Posts
+      &.blog article.post {
+
+        .entry-header .entry-title a,
+        .entry-header .entry-title:hover {
+            color: $light-primary-color;
+        }      
+
+        .entry-header .entry-meta span a {
+            color: #808080;
+
+            &:hover {
+                color: $light-theme-color;
+            }
+
+        }
+
+        .entry-content .link-more .more-link {
+            background-color: $light-theme-color;
+
+            &:hover {
+                opacity: 0.8;
+                color: #fff;
+            }
+        }
+
+        .entry-footer .tags-links a {
+            color: $light-secondry-color;
+
+            &:hover {
+                color: $light-theme-color;
+            }
+        }
+
+        .entry-footer .socials-share-links ul li a {
+            color: $light-primary-color;
+            
+            &:hover {
+                color: $light-theme-color;
+            }
+        }
+        
+    }
+
+
+    //Widgets
+     .widget h2.widget-title {
+        color: $light-primary-color;
+    }
+
+    .widget.widget_search input[type="search"] {
+        background-color: #eee;
+        color: $light-secondry-color;
+    }
+
+    .widget.widget_search .search-form .search-submit {
+        color: $light-primary-color;
+    }
+
+    .widget.widget_categories li a {
+        color: $light-secondry-color;
+
+        &:hover {
+            color: $light-theme-color;
+        }
+    }
+
+    .tag-cloud li a {
+        color: $light-secondry-color;
+
+        &:hover {
+            color: $light-theme-color;
+        }
+    }
+
+
+    //Navigation
+
+     .pagination .page-numbers {    
+        color: $light-primary-color;
+    }
+
+    .navigation.pagination .prev.page-numbers:before,
+    .navigation.pagination .next.page-numbers:before {
+        border-color: transparent transparent transparent $light-primary-color;
+    }
+
+    .post-navigation {
+        border-top: 1px solid rgba(10, 10, 10, 0.2);
+        border-bottom: 1px solid rgba(10, 10, 10, 0.2);
+    }
+
+    .navigation.post-navigation .nav-links .nav-previous .nav-subtitle:before, 
+    .navigation.post-navigation .nav-links .nav-next .nav-subtitle:after {
+        background-image: url( 'assets/images/svg/chevron-dark.svg' );
+    }
+
+    .navigation.post-navigation .nav-links .nav-previous a,
+    .navigation.post-navigation .nav-links .nav-next a {
+        color: $light-primary-color;
+    }
+
+    //Comments
+    .comment-author .fn {
+        color: $light-primary-color;
+    }
+
+    .comment-metadata > a  {
+        color: $light-primary-color;
+    }
+
+    .comment-body .reply .comment-reply-link {
+        color: $light-primary-color;
+
+        &:hover {
+            color: $light-theme-color;
+        }
+    }
+
+    .comment-list .comment {
+        border-top-color: rgba(10, 10, 10, 0.1);
+    }
+
+    .comments-area > .comment-list > .comment:last-of-type {
+        border-bottom-color: rgba( 10, 10, 10, 0.1 );
+    }
+
+
+    //Footer
+    .site-footer {
+
+        .social-links-menu {
+
+            li {
+
+                &:after {
+                    background-color: $light-theme-color;
+                }
+
+                a {
+                    color: $light-secondry-color;
+
+                    i {
+                        color: $light-secondry-color;
+                    }
+
+                }
+
+            }
+
+        }
+
+        .copyright {
+            color: $light-secondry-color;
+        }
+
+    }
+
+
+}

@@ -1,0 +1,58 @@
+/*--------------------------------------------------------------
+4. Animation
+--------------------------------------------------------------*/
+
+.portfolio-listing-wrap.listing-zigzag,
+.portfolio-listing-wrap.listing-vertical-alt,
+.portfolio-listing-wrap.listing-vertical,
+.portfolio-listing-wide {
+
+  .pl-media, .cbp-caption-defaultWrap {    
+    position: relative;
+
+    &:after {
+      transition: transform cubic-bezier(0.4, 0, 0.2, 1) 0.5s;
+      content: "";
+      display: block;
+      position: absolute;
+      top: -30px;
+      right: -30px;
+      bottom: -30px;
+      left: -30px;
+      border: solid 30px $dark-bg-color;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    img {
+      transition: transform cubic-bezier(0.4, 0, 0.2, 1) 0.5s;
+    }
+
+    &:hover {
+
+      &:after {
+        -webkit-transform: scale(0.97);
+        transform: scale(0.97);
+      }
+
+      img {
+        -webkit-transform: scale(1.02);
+        transform: scale(1.02);
+      }
+
+    }
+  }
+}
+
+@keyframes dropdown-effect {
+
+  0% { 
+      opacity: .6; 
+  }   
+
+  100% { 
+      opacity: 1 
+  }
+}

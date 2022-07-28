@@ -1,0 +1,41 @@
+/*--------------------------------------------------------------
+17. Contact Info
+--------------------------------------------------------------*/
+
+.contact-info {
+
+    div {
+        margin-bottom: 23px;
+
+        h3{
+            font-size: 19px;                       
+            font-weight: 500;
+            color: $dark-primary-color;  
+            margin-bottom: 7px;
+        }
+
+        span {
+            display: block;
+            color: $dark-secondry-color;
+            font-size: 15px;
+            line-height: 21px;
+            a {
+                color: $dark-secondry-color;
+                font-size: 15px;
+                line-height: 21px;
+            }
+
+        }
+
+        address {
+            color: $dark-secondry-color;
+            font-size: 15px;
+            line-height: 1.6;           
+        }
+    }
+
+    @media (max-width: 767px) {
+        margin-top: 30px;
+    }
+
+}

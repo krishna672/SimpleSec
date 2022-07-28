@@ -1,0 +1,57 @@
+/*--------------------------------------------------------------
+1. Base
+--------------------------------------------------------------*/
+
+:focus {
+    outline: none;
+}
+
+body {
+    background-color: $dark-bg-color;
+    color: $dark-secondry-color;
+} 
+
+img {
+    max-width: 100%;
+    height: auto;    
+}
+
+.accent-color {
+    color: $dark-theme-color;
+}
+
+a:hover {
+    color: $dark-theme-color;
+    text-decoration: none;
+}
+
+.button a, .btn-container a {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 13px 27px;
+    background-color: transparent;
+    color: #fff;
+    display: inline-block;
+    -webkit-transition: .2s ease-in;
+    transition: .2s ease-in;
+    line-height: 1;
+    text-decoration: none;
+    border: 1px solid #fff;
+}
+
+.btn-container.btn-link a {
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 13px 27px 13px 27px;
+
+    &:hover {
+        color: $dark-bg-color;
+        background-color: $dark-primary-color;
+    }
+}
+
+.btn-container.btn-link.btn-big a {
+    font-size: 20px;
+    padding: 25px 50px;
+}

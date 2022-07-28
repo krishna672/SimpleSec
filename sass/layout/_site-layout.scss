@@ -1,0 +1,86 @@
+/*--------------------------------------------------------------
+19. Site Layout
+--------------------------------------------------------------*/
+
+.site-content{
+    overflow: hidden;
+}
+
+#page {
+    position: relative;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+
+body { 
+
+    &.blog, &.single-post { 
+        
+        .site-content-contain .site-content {
+            padding: 60px 0 120px;
+        }
+    }
+    &.single-portfolio {
+
+        article.portfolio {
+            padding-top: 60px;
+        }
+        .portfolio-navigation-wrap {
+            padding-bottom: 120px;
+        }
+    }
+  
+}
+
+@media ( min-width: 992px ) {
+    
+     body.has-sidebar {
+
+        .container {
+
+            #primary.content-area {
+                width: 75%;
+                float: left;
+                padding-right: 50px;
+            }
+
+            #secondary.widget-area {
+                float: left;
+                width: 25%;
+            }
+        }
+    }
+}
+
+@media ( min-width: 1200px ) {
+    
+    body.has-left-sidebar-menu {
+
+        &.blog, &.single-post {
+
+            .site-content-contain .site-content {
+                padding-top: 120px;
+            }
+        }
+    }
+}
+
+@media ( max-width:767px ) {
+
+     body {
+
+        &.blog, &.single-post {
+
+            .site-content-contain .site-content {
+                padding: 60px 0 80px;
+            }
+        }
+
+        &.single-portfolio {
+
+           .portfolio-navigation-wrap {
+                padding-bottom: 80px;
+            }
+        }
+    }
+}

@@ -1,0 +1,37 @@
+/*--------------------------------------------------------------
+6. Heading Block
+--------------------------------------------------------------*/
+
+.heading-block {
+    h1 {
+        color: $dark-primary-color;
+
+        &.block-size-1 {            
+            font-size: 54px;
+            line-height: 64px;
+            font-weight: 600;                   
+           
+            @media ( max-width:767px ) {                     
+                font-size: 40px;
+                line-height: 50px;                        
+            }
+        }  
+
+        &.block-size-2 {            
+            font-size: 44px;
+            line-height: 54px;
+            font-weight: 600;                   
+           
+            @media ( max-width:767px ) {                     
+                font-size: 40px;
+                line-height: 50px;                        
+            }
+        }                       
+    }    
+    
+    h2 {
+        color: $dark-primary-color;
+        font-size: 24px;
+        font-weight: 500;
+    }
+}

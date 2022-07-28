@@ -1,0 +1,157 @@
+/*--------------------------------------------------------------
+12. Portfolio Split Slider
+--------------------------------------------------------------*/
+
+.portfolio-split-slider {
+
+    .full-width-bg-image {        
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .caster-ms-left {
+
+        .caster-ms-section {
+
+            .title-wrap {
+                text-align: right;
+                padding: 25px 100px 0 0 ;
+            }
+        }
+    }
+
+    .caster-ms-section {
+
+        .title-wrap {
+            padding: 25px 0 0 100px;
+
+            h1 {
+                font-size: 42px;
+                font-weight: 600;
+                line-height: 1.1;
+                margin-bottom: 40px;
+            }
+
+            p {
+                margin: 0 0 11px 0;
+                font-size: 14px;
+                font-weight: 500;
+            }
+
+            .btn-container {
+                margin-top: 25px;
+
+                a:hover {
+                    background-color: $dark-primary-color;
+                    color: $dark-bg-color;              
+                }
+            }
+        }
+    }
+
+    .caster-ms-left:not(.ms-left),
+    .caster-ms-right:not(.ms-right) {        
+        width: 50%;
+        position: relative;
+        align-items: center;
+        min-height: 100vh;
+
+        .caster-ms-section {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+        }   
+    }
+    
+    .caster-ms-left:not(.ms-left) {
+        float: left;
+        
+        .caster-ms-section{
+            justify-content: flex-end;
+        }
+    }
+
+    .caster-ms-right:not(.ms-right) {
+        float: right;
+    }
+}
+
+body {
+
+    .portfolio-split-slider {        
+        height: 100vh;
+
+        .full-width-bg-image {
+            width: 100%;
+        }
+    }
+}
+
+#multiscroll-nav span {
+    border: 1px solid $dark-primary-color !important;
+}
+
+#multiscroll-nav li .active span {
+    background: $dark-primary-color !important;
+}
+
+#multiscroll-nav span {
+    width: 10px !important;
+    height: 10px !important;
+}
+
+#multiscroll-nav li {
+    margin-top: 8px !important;
+    margin-bottom: 8px !important;
+}
+
+@media ( min-width: 768px ) and ( max-width: 1199px ) {
+
+    .portfolio-split-slider .caster-ms-right .caster-ms-section .title-wrap {
+        padding: 0 60px;
+    }
+
+    .portfolio-split-slider .caster-ms-right .caster-ms-section .title-wrap h1 {
+        font-size: 40px;
+    }
+}
+
+@media ( max-width: 991px ) { 
+
+    .caster-ms-left.ms-left, .caster-ms-right.ms-right {
+        width: 100% !important;
+    }
+
+    .portfolio-split-slider .caster-ms-right .caster-ms-section:not(.ms-table),
+    .portfolio-split-slider .caster-ms-left .caster-ms-section:not(.ms-table) {
+        height: 100vh;
+        width: 100%;
+        float: right;
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    .ms-section.ms-table {
+        background-color: rgba(9,11,11,.3);
+    }
+
+    .portfolio-split-slider .caster-ms-right .caster-ms-section .title-wrap {
+        padding: 0 70px 0 40px;
+    }
+
+    .portfolio-split-slider  .caster-ms-section .title-wrap p {
+        color:$dark-primary-color;
+    }
+
+    .portfolio-split-slider .full-width-bg-image {
+            z-index: -1;
+    }
+
+    .portfolio-split-slider .caster-ms-left .caster-ms-section .title-wrap {
+        text-align: left;
+        padding:0 70px 0 40px;
+    }
+
+}

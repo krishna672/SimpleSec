@@ -1,0 +1,40 @@
+/*--------------------------------------------------------------
+18. Progress Bar
+--------------------------------------------------------------*/
+
+.progress-bar-wrapper {
+
+    margin-top: 25px;
+
+    .progress-bar-wrap {
+        position: relative;
+        margin-bottom: 20px;       
+
+        .progress-bar-title {
+            color: $dark-primary-color;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 29px;
+        }
+   
+        .progress {           
+            height: 3px;
+            line-height: 3px;           
+            font-size: 12px;
+            font-weight: 500;
+            background-color: #505050;
+
+            .progress-bar {
+                color: $dark-primary-color;
+                background-color: $dark-primary-color;
+
+                .percentage {
+                    position: absolute;
+                    top: 13px;
+                    left: 0%;    
+                }
+            }
+        }
+
+    }
+}

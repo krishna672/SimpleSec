@@ -1,0 +1,161 @@
+/*--------------------------------------------------------------
+Standard Menu
+--------------------------------------------------------------*/
+
+@media ( min-width:992px ) {
+
+    #masthead.site-header {
+
+        &.standard {
+
+            #ham-trigger-wrap {
+                display: none;
+            } 
+
+            #site-branding {
+
+                a {
+                    padding: 50px 0;
+                }
+            }
+
+            #site-navigation {
+
+                .menu {
+
+                    & > li {
+                        position: relative;
+                        display: inline-block;
+                        margin-left: 46px;
+
+                        &:first-of-type {
+                            margin-left: 0;
+                        }
+
+                        & > a {
+                            font-size: 16px;
+                            font-weight: 400;
+                            text-transform: initial;
+                            display: block;
+                            position: relative;
+                            padding-top: 28px;
+                            padding-bottom: 25px;
+
+                            &:after {
+                                content: '';
+                                position: absolute;
+                                width: 0;
+                                height: 2px;
+                                bottom: 16px;
+                                left: 0;
+                                opacity: 0;
+                                transition: all .2s ease;
+                                background-color: $dark-theme-color;
+                            }
+                        }
+
+                        ul {
+                            position: absolute;
+                            top: 120%;
+                            background-color: #111313;
+                            width: 200px;
+                            z-index: 10;
+                            left: -25px;
+                            right: 0;
+                            margin-left: 0;
+                            opacity: 0;
+                            visibility: hidden;
+                            padding: 24px 27px 14px;
+                            transition: all .2s ease;
+
+                            li {
+                                margin: 0;
+                                position: relative;
+                                margin-bottom: 14px;
+
+                                a {
+                                    font-size: 14px;
+                                    line-height: 18px;
+                                    display: block;
+                                    color:#fff;
+                                    opacity: .6;
+
+                                    &:hover {
+                                        opacity: 1;
+                                    }
+                                }
+                                
+                                &:hover {
+
+                                    & > a {
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+
+                            ul {
+                                padding: 18px 25px 8px;
+                                left: 155px;
+                                top: -19px;
+                                transition: all .4s ease-out;
+                            }
+                        }
+
+                        &:hover {
+
+                            & > ul {                                
+                                animation: dropdown-effect .2s ease-out;
+                                -webkit-animation: dropdown-effect .2s ease-out;
+                                -moz-animation: dropdown-effect .2s ease-out;
+                                display: block;
+                                opacity: 1;
+                                visibility: visible;
+                                top: 100%;
+
+                                & > li:hover  ul {                                    
+                                    display: block;
+                                    animation: dropdown-effect .2s ease-out;
+                                    -webkit-animation: dropdown-effect .2s ease-out;
+                                    -moz-animation: dropdown-effect .2s ease-out;
+                                    opacity: 1;
+                                    visibility: visible; 
+                                    left: 165px;
+                                    transition: all .2s ease-out;
+                                }
+                            }
+                        }
+
+                        &.current-menu-item,
+                        &.current-menu-parent,
+                        &:hover {
+
+                            & > a {
+
+                                &:after {
+                                    opacity: 1;
+                                    width: 15px;
+                                }
+                            }
+                        }
+
+                        &:hover {
+
+                            & > a {
+                                opacity: 1;
+                            }
+                        }
+                        
+                        & > a {
+                            color:#fff;
+                        }
+
+                        &.invert-dropdown {
+                            left: auto !important;
+                            right: 175px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,98 @@
+/*--------------------------------------------------------------
+2. Typography
+--------------------------------------------------------------*/
+
+body {
+    font-size: 15px;
+    line-height: 1.6;
+    font-weight: 400;   
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+    color: $dark-primary-color;  
+    clear: both;
+    line-height: 1.4;
+    margin: 0 0 20px;    
+}
+
+h1 {
+    font-size: 44px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+h3 {
+    font-size: 28px;
+}
+
+h4 {	
+    font-size: 22px;
+}
+
+h5 {
+    font-size: 18px;
+}
+
+h6 {
+    font-size: 16px;
+}
+
+p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0 0 20px;
+    padding: 0;
+    color: $dark-secondry-color;
+}
+
+
+//Primary Font
+h1, h2, h3, h4, h5, h6,
+.vertical-text p,
+#masthead.site-header.standard #site-navigation .menu a,
+#masthead.site-header.fullscreen-hamburger-menu #site-navigation .menu a,
+#masthead.site-header.left-sidebar-menu #site-navigation .menu a,
+#masthead.site-header.left-hamburger-menu #site-navigation .menu a,
+#masthead.site-header.left-sidebar-menu .contact-info,
+.link-more .more-link,
+.post .entry-footer .footer-links .tags-links, 
+.comment-author, .comment-author .fn,
+button, input[type="button"],
+input[type="submit"],
+blockquote,
+.single-portfolio .portfolio .entry-header .entry-title,
+.testimonials .tml-content p,
+.cta .cta-background-text,
+.cta a,
+.caster-portfolio-wrap .cbp-l-grid-agency-title,
+.caster-portfolio-wrap .cbp-l-caption-title,
+.load-more a,
+.page-links,
+.progress-bar-wrapper .progress-bar-wrap .progress-bar-title,
+.content-box span {
+    font-family: "Poppins", sans-serif;
+}
+
+//Secondary Font
+body, 
+.caster-portfolio-wrap .cbp-l-grid-agency-desc, 
+.caster-portfolio-wrap .cbp-l-caption-desc, 
+input, 
+textarea, 
+select, 
+.caster-portfolio-wrap .cbp-l-filters-text .cbp-filter-item, 
+.caster-portfolio-wrap .cbp-l-subfilters .cbp-filter-item, 
+.page-links a, 
+.page-links span, 
+.tags-links a, 
+button, 
+input[type="button"], 
+input[type="submit"], 
+.load-more a, 
+.link-more .more-link {
+    font-family: "Roboto", sans-serif;
+}
